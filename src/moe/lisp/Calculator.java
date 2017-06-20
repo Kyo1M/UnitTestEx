@@ -17,9 +17,38 @@ public class Calculator {
     /**
      * 3引数a, b, cの最大値を返す
      * テストの練習のため，わかりにくいコードにしてある．
+     * @param a
      * @return a, b, cの最大値
      */
     public int max(int a, int b, int c) {
+        int x;
+        if (a >= b){
+            if (b >= c){
+                x = a;
+            }
+            //else if(c >= b && a >= c){
+            else if (a >= c){
+                x = a;
+            }
+            else{
+                x = c;
+            }
+        }
+        else{
+            if(a >= c){
+                x = b;
+            }
+            //else if(c >= a && b >= c){
+            else if(b >= c){
+                x = b;
+            }
+            else {
+                x = c;
+            }
+        }
+        return x;
+    }
+        /*
         int x;
         if (a > b) {
             if (b > c) {
@@ -36,4 +65,6 @@ public class Calculator {
         }
         return x;
     }
+*/
+        
 }
